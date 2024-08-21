@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.container {
+  position: relative;
+}
+
+.container .card {
+  margin: 2% 4% 9%;
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  border: 20px;
+  color: green;
+  border-radius: 10px;
+
+  /*-------Animation*/
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-direction: alternate-reverse;
+}
+@keyframes movement {
+  0% {
+    margin-left: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    margin-left: 200px;
+    transform: rotate(0deg);
+  }
+}
